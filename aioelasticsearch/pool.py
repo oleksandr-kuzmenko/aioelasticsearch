@@ -111,7 +111,7 @@ class AIOHttpConnectionPool:
             self.orig_connections - skip
         ]
 
-        await asyncio.gather(*coros, loop=self.loop)
+        await asyncio.gather(*coros)
 
 
 class DummyConnectionPool(AIOHttpConnectionPool):

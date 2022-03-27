@@ -219,7 +219,7 @@ class AIOHttpTransport(Transport):
 
         coros.append(self.connection_pool.close())
 
-        await asyncio.gather(*coros, loop=self.loop)
+        await asyncio.gather(*coros)
         self._closed = True
 
     async def get_connection(self):
